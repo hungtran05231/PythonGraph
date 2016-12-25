@@ -29,10 +29,10 @@ def add_mim_and_delete_adjacent_leaf(G, node, mim):
 	added=0
 	for item in G.neighbors(node):
 		if(is_leaf(G, item)):
-			edge=[]
-			edge.append(node)
-			edge.append(item)
 			if(added==0):
+				edge=[]
+				edge.append(node)
+				edge.append(item)
 				mim.append(edge)
 				added=1
 			G.remove_node(item)
